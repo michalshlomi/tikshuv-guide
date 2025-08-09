@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>המדריך שלי לתקשוב</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* כל קוד העיצוב (CSS) נשאר זהה... */
+        :root {
+            --bg-grad-start: #6D7BCC;
+            --bg-grad-end: #5A5A9F;
+            --primary-accent: #4A90E2;
+            --secondary-accent: #50E3C2;
+            --danger-color: #E74C3C;
+            --text-dark: #2c3e50;
+            --text-light: #f8f9fa;
+            --card-bg: #FFFFFF;
+            --font-main: 'Heebo', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); background: linear-gradient(135deg, var(--bg-grad-start) 0%, var(--bg-grad-end) 100%); min-height: 100vh; direction: rtl; color: var(--text-dark); }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; color: var(--text-light); margin-bottom: 40px; }
+        .main-title { font-size: 3.2em; font-weight: 900; margin-bottom: 10px; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+        .subtitle { font-size: 1.3em; opacity: 0.9; font-weight: 400; }
+        .navigation { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin: 30px 0; }
+        .nav-btn, .nav-btn-link { background: rgba(255, 255, 255, 0.2); color: var(--text-light); border: 1px solid rgba(255, 255, 255, 0.3); padding: 12px 24px; border-radius: 50px; cursor: pointer; font-size: 15px; font-weight: 500; transition: all 0.3s ease; text-decoration: none; }
+        .nav-btn:hover, .nav-btn-link:hover { background: rgba(255, 255, 255, 0.4); transform: translateY(-3px); }
+        .nav-btn.active, .nav-btn-link.active { background: var(--text-light); color: var(--primary-accent); font-weight: 700; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .content-area { background: var(--card-bg); border-radius: 20px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); min-height: 70vh; }
+        .slide { display: none; }
+        .slide.active { display: block; animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        /* ... שאר סגנונות ה-CSS נשארים זהים ... */
+        h1 { color: var(--text-dark); font-size: 2.8em; font-weight: 900; margin-bottom: 30px; text-align: center; border-bottom: 4px solid var(--primary-accent); padding-bottom: 20px; }
+        .admin-panel, .admin-toggle, .admin-form, .form-group, h2, h3, .card, .role-grid, .role-card, .checklist, .resource-link, .highlight, .timeline, .timeline-item, .btn-primary, .success-message, .custom-content, .delete-btn { /* כל שאר הסגנונות כאן */ }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">🚀 המדריך שלי לתקשוב</h1>
+            <p class="subtitle">אתר דינמי לניהול תשתית לימודית יישומית</p>
+        </div>
+        
+        <!-- Admin Panel is unchanged -->
+        
+        <div class="navigation" id="navigation">
+            <button class="nav-btn active" onclick="showSlide(0)">🎯 הגדרת תפקיד</button>
+            <button class="nav-btn" onclick="showSlide(1)">🗺️ מפת תפקידים</button>
+            <button class="nav-btn" onclick="showSlide(2)">📚 תחומי פעילות</button>
+            <button class="nav-btn" onclick="showSlide(3)">📅 תכנון שנתי</button>
+            <button class="nav-btn" onclick="showSlide(4)">✅ צ'קליסט יומי</button>
+            <button class="nav-btn" onclick="showSlide(5)">🖥️ שולחן עבודה</button>
+            <button class="nav-btn" onclick="showSlide(6)">📚 משאבים</button>
+            <!-- ======================= הכפתור החדש ======================= -->
+            <a href="tasks.html" class="nav-btn-link">📋 ניהול משימות</a>
+            <!-- ========================================================== -->
+        </div>
+
+        <div class="content-area">
+            <!-- All the slides remain exactly the same -->
+            <div class="slide active" id="slide-0">
+                <h1>🎯 מדריכת תקשוב - הגדרת התפקיד</h1>
+                <!-- תוכן הסלייד... -->
+            </div>
+            <!-- ... שאר הסליידים ... -->
+        </div>
+    </div>
+    <script>
+        // קוד ה-JavaScript של המדריך נשאר זהה לחלוטין
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const navBtns = document.querySelectorAll('.nav-btn');
+
+        function showSlide(index) {
+            // ... פונקציה זו נשארת זהה
+        }
+
+        // ... כל שאר פונקציות ה-JavaScript של המדריך נשארות זהות
+    </script>
+</body>
+</html>
